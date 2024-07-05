@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/IceCard.astro";
+import { Image } from "astro:assets";
+import Ice from "../ice.png";
+import Store from "../store.png";
+import Commit from "../commit.png";
+---
+
+<Layout title="Lele">
+  <section class="section color top-section">
+    <div class="container">
+      <div class="flex-column flex-lg-row section-content">
+        <div
+          class="d-flex justify-content-center align-items-start flex-column"
+        >
+          <p class="text-white fs-1 fw-bold">RASA TERBAIK ADA DI SINI</p>
+          <p class="text-white fw-medium">
+            Kami percaya bahwa es krim lebih dari sekadar makanan penutup.<br
+            />Ini adalah pengalaman. Dari rasa klasik hingga kreasi unik, setiap
+            sendok es krim kami dibuat dengan bahan-bahan berkualitas tinggi dan
+            penuh cinta. Ayo, manjakan dirimu dan orang yang kamu cintai dengan
+            es krim terbaik di kota!
+          </p>
+          <button class="cta mt-2 fw-semibold"
+            >Kunjungi Kami Hari Ini dan Rasakan Keajaibannya!</button
+          >
+        </div>
+        <Image style="width: auto;" src={Ice} alt={"lele"} />
+      </div>
+    </div>
+  </section>
+  <section class="section pattern">
+    <div class="container h-100 row align-items-center">
+      <div class="col-lg-5 col-12 row align-items-center pt-5 pt-lg-0">
+        <Image alt={"elel"} src={Store} />
+      </div>
+      <div class="col-lg-7 h-100 col-12 pt-5 pt-lg-0">
+        <h1 class="lead fs-1 fw-bold">Tentang kami</h1>
+        <p class="fs-5">Telah Berdiri sejak tahun 2011</p>
+        <p style="text-justify: auto">
+          Didirikan oleh teman seumur hidup dengan hasrat yang sama untuk
+          hidangan penutup, Frosty Delights dimulai sebagai gerobak es krim
+          kecil di jantung kota asal kami. Seiring berjalannya waktu, dedikasi
+          kami terhadap kualitas dan kreativitas telah menjadikan kami favorit
+          lokal yang dicintai. Setiap rasa terinspirasi oleh kenangan berharga
+          dan dibuat dengan cinta, menggunakan hanya bahan-bahan alami terbaik.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section pattern">
+    <div class="container h-100 row align-items-center">
+      <div class="col-lg-6 h-100 col-12 pt-5 pt-lg-0">
+        <h1 class="lead fs-1 fw-bold">Komitmen Kami</h1>
+        <p style="text-justify: auto">
+          Kualitas dan komunitas adalah inti dari segala yang kami lakukan. Kami
+          mendapatkan bahan-bahan dari petani dan pengrajin lokal, memastikan
+          setiap sendok segar dan penuh rasa. Tim kami berkomitmen untuk praktik
+          berkelanjutan, dari kemasan ramah lingkungan hingga dukungan kami
+          terhadap inisiatif lokal.
+        </p>
+      </div>
+      <div class="col-lg-6 col-12 row align-items-center pt-5 pt-lg-0">
+        <Image style="height: 330px;" src={Commit} alt="" />
+      </div>
+    </div>
+  </section>
+  <section class="section color">
+    <div class="container">
+      <div
+        style="margin-top: 100px;"
+        class="text-center text-white fs-1 fw-bold"
+      >
+        Our Product
+      </div>
+      <div class="row justify-content-center gap-4 py-5">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+  .section-content {
+    /* padding-top: 70px; */
+    display: flex;
+    justify-content: space-around;
+  }
+  .top-section {
+    padding-top: 60px;
+  }
+  .section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    min-height: 100vh;
+  }
+  .color {
+    background-color: hsla(83, 0%, 100%, 1);
+    background-image: radial-gradient(
+        at 73% 9%,
+        hsla(33, 97%, 75%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 0% 36%, hsla(317, 100%, 76%, 1) 0px, transparent 50%),
+      radial-gradient(at 77% 96%, hsla(216, 64%, 67%, 1) 0px, transparent 50%);
+  }
+  .pattern {
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#ff8bed 0.5px, transparent 0.5px),
+      radial-gradient(#ff8bed 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      10px 10px;
+  }
+  .cta {
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff8b8baf 0%, #c500cc66 100%);
+    padding: 20px 15px;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 500ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .cta:hover {
+    transform: scale(1.02);
+  }
+</style>

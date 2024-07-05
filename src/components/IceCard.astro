@@ -1,0 +1,27 @@
+---
+import ice from "../ice.png";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="card d-flex align-items-center col-10 col-md-6 col-lg-3 p-3 ice-card border-0 border-radius-0"
+>
+  <Image style={"width: 210px; height: 210px"} src={ice} alt="" />
+  <div class="card-title mt-2 text-center">Vanilla Cream</div>
+</div>
+<style>
+  .ice-card {
+    width: fit-content;
+    background: rgba(255, 18, 216, 0.269);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(232, 29, 237, 0.3);
+  }
+  .card-title {
+    font-size: x-large;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+  }
+</style>
