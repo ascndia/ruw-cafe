@@ -6,5 +6,5 @@ export default defineConfig({
     service: passthroughImageService(),
   },
   site: "https://ascndia.github.io",
-  base: "ruw-cafe",
+  base: "/ruw-cafe",
 });
